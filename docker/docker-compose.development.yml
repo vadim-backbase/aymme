@@ -1,0 +1,26 @@
+version: '3.7'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  mongodb:
+    image: 'bitnami/mongodb:5.0'
+    networks:
+      - app-tier
+    ports:
+      - "27017:27017"
+    volumes:
+      - 'mongo-db:/bitnami/mongodb'
+    environment:
+      - MONGODB_ADVERTISED_HOSTNAME=0.0.0.0
+#      - MONGODB_ADVERTISED_HOSTNAME=host.docker.internal
+#      - MONGODB_REPLICA_SET_MODE=primary
+#      - MONGODB_REPLICA_SET_NAME=mongodb
+      - MONGODB_ROOT_USER=root
+      - MONGODB_ROOT_PASSWORD=root
+      - MONGODB_REPLICA_SET_KEY=replicasetkey123
+      - MONGODB_DATABASE=aymme
+volumes:
+  mongo-db:

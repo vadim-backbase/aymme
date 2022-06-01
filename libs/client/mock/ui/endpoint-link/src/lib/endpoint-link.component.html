@@ -1,0 +1,13 @@
+<li
+  class="dark:border-blend-50 hover:dark:bg-blend-50 flex cursor-pointer flex-row items-center rounded-sm border-gray-100 bg-orange-600 px-2 py-3 transition ease-in-out hover:bg-gray-100"
+  [ngClass]="{ 'is-selected': isSelected }"
+>
+  <span [ngClass]="getMethodClass(method)" class="mr-4 rounded-md p-1 px-2 text-xs font-medium text-white">{{
+    method
+  }}</span>
+  <span class="path-txt break-all">{{ path }}</span>
+  <button class="close-btn ml-auto hidden rounded-sm px-1" (click)="onRemoveEndpoint($event)">
+    <i class="far fa-times"></i>
+  </button>
+</li>
+

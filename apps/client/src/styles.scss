@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+
+// Base mixin
+@include mat-core();
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~ngx-toastr/toastr';
+
+@import './styles/main';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Motiva Sans', sans-serif;
+}

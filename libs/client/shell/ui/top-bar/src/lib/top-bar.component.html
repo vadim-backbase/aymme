@@ -1,0 +1,47 @@
+<header class="layout-topbar flex justify-between text-sm">
+  <div class="w-2/5 pl-6">
+    <a href="/">
+      <ay-logo></ay-logo>
+    </a>
+  </div>
+  <div class="flex w-3/5 flex-row pr-6">
+    <nav data-cy="main-navigation" class="flex grid w-full flex-row justify-items-end">
+      <ul data-cy="main-navigation-list" class="flex h-full flex-row items-center">
+        <li class="mr-10">
+          <a [routerLink]="['/projects']" class="hover:cursor-pointer hover:pb-2">
+            <i class="fa fa-tasks-alt mr-2 opacity-80"></i>
+            <span>Projects</span>
+          </a>
+        </li>
+        <li class="mr-10">
+          <a [routerLink]="['/how-to-use']" class="hover:cursor-pointer hover:pb-2">
+            <i class="far fa-info-circle mr-2 opacity-80"></i>
+            <span>How to Use</span>
+          </a>
+        </li>
+        <!-- <li class="mr-10">
+          <a routerLink="" class="hover:cursor-pointer hover:pb-2">
+            <i class="fa fa-cog mr-2 opacity-80"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li class="mr-10">
+          <a routerLink="" class="hover:cursor-pointer hover:pb-2">
+            <i class="fa fa-user mr-2 opacity-80"></i>
+            <span>Profile</span>
+          </a>
+        </li> -->
+        <li class="mr-10">
+          <a routerLink="" class="hover:cursor-pointer hover:pb-2">
+            <i class="fa fa-books mr-2 opacity-80"></i>
+            <span>Documentation</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="theme-switcher-wrapper flex h-full items-center">
+      <ay-theme-switcher></ay-theme-switcher>
+    </section>
+  </div>
+</header>

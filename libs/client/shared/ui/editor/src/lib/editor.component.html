@@ -1,0 +1,15 @@
+<div
+  class="dark:border-blend-50 relative h-full min-h-full overflow-hidden rounded-tr-md rounded-br-md rounded-bl-md border border-gray-100 bg-[#1e1e1e] p-1 pt-5"
+>
+  <button class="absolute right-2 top-2 text-sm hover:opacity-90 dark:text-white" (click)="format()">
+    <i class="fa fa-chevron-left mr-1"></i>
+    <i class="fa fa-chevron-right"></i>
+  </button>
+  <ngx-monaco-editor
+    style="height: 100%"
+    [options]="editorOptions"
+    [(ngModel)]="code"
+    (onInit)="onEditorInit($event)"
+    (ngModelChange)="onChange()"
+  ></ngx-monaco-editor>
+</div>

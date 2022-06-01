@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://aymme.backbasecanada.com:3333",
+    "secure": true
+  }
+}

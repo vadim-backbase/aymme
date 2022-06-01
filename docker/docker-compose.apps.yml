@@ -1,0 +1,25 @@
+version: "3.7"
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  api:
+    container_name: aymme-be
+    image: aymme/api:latest
+    networks:
+      - app-tier
+    environment:
+#      - DATABASE_URL=mongodb://root:root@mongodb-primary:27017/aymme?authSource=admin
+      - DATABASE_URL=mongodb://root:root@mongod-rs:27017/aymme?authSource=admin
+    ports:
+      - "3333:3333"
+
+  client:
+    container_name: aymme-fe
+    image: aymme-fe:0.1
+    ports:
+      - "80:80"
+    depends_on:
+      - api

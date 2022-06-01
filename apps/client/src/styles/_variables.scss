@@ -1,0 +1,36 @@
+:root {
+  // brand colors
+  --ay-brand: #57B7ED !important;
+  --ay-brand-light: #57B7ED !important;
+  --ay-tip: #57B7ED !important;
+  --ay-bg-color: #003341;
+  --ay-text-color: white;
+  --ay-text-color-placeholder: #aaa;
+
+  --ay-loader-color: rgba(255, 255, 255, .5);
+  --ay-border-color: rgba(255, 255, 255, .05);
+
+  --ay-active-color: rgba(255, 255, 255, .2);
+
+  --ay-blue-highlight: #4287f5;
+
+  --ay-stripes-bg-1: rgba(255, 255, 255, .05);
+  --ay-stripes-bg-2: rgba(255, 255, 255, .1);
+
+  --ay-brand-orange: #f2b022;
+  --ay-brand-purple: #9729f7;
+  --ay-brand-red: #eb3a3d;
+
+  scroll-behavior: smooth;
+}
+
+html.light {
+  --ay-bg-color: white;
+  --ay-text-color: #003543;
+  --ay-text-color-placeholder: #acacac;
+  --ay-loader-color: rgba(0, 0, 0, .5);
+  --ay-border-color: rgba(0, 0, 0, .1);
+  --ay-active-color: rgb(220, 220, 220);
+  --ay-stripes-bg-1: #f9f9f9;
+  --ay-stripes-bg-2: #fff;
+}
